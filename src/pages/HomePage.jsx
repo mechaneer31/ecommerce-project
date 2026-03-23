@@ -36,7 +36,7 @@ export function HomePage() {
             </div>
             </div>
 
-            <div classNameName="home-page">
+            <div className="home-page">
             <div className="products-grid">
                 <div className="product-container">
                 <div className="product-image-container">
