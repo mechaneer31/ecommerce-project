@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { Header } from '../components/Header'
 import './HomePage.css';
 import { products } from '../../starting-code/data/products'
