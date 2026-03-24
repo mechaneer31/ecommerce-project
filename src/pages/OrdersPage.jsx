@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 import BuyAgainImage from '../assets/images/icons/buy-again.png'
 
+
 export function OrdersPage() {
 
     return (
@@ -99,7 +100,7 @@ export function OrdersPage() {
                     <div className="order-container">
 
                         <div className="order-header">
-                            <div className="order-header-left-section">
+                            <div className="order-header-left-section">cart
                                 <div className="order-date">
                                     <div className="order-header-label">Order Placed:</div>
                                     <div>June 10</div>
