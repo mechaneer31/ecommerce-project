@@ -17,8 +17,8 @@ export function TrackingItemDetails({ order, productId }) {
     console.log("totalDeliveryTime: ", totalDeliveryTime)
 
     //how much time has passed
-    //const timePassedMs = dayjs().valueOf() - order.orderTimeMs
-    const timePassedMs = totalDeliveryTime * 0.3;  //test timeframe to check it works
+    const timePassedMs = dayjs().valueOf() - order.orderTimeMs
+    //const timePassedMs = totalDeliveryTime * 0.3;  //test timeframe to check it works
     console.log("timePassedMs: ", timePassedMs)
 
     //Percent of total delivery time.
