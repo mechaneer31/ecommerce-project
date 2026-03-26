@@ -48,8 +48,10 @@ function App() {
         />
 
         <Route
-          path="tracking"
-          element={<TrackingPage />}
+          path="tracking/:orderId/:productId"
+          element={<TrackingPage
+            cart={cart}
+          />}
         />
 
         <Route

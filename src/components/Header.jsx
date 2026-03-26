@@ -7,6 +7,7 @@ import WhiteMobileLogo from '../assets/images/mobile-logo-white.png'
 import WhiteLogoImage from '../assets/images/logo-white.png'
 
 export function Header({ cart }) {
+    if (!cart) return <div className="header-placeholder">Loading Header...</div>;
 
     let totalQuantity = 0;
     cart.forEach((cartItem) => {

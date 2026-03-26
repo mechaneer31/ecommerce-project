@@ -4,7 +4,9 @@ import { Link } from 'react-router';
 
 
 
-export function OrderCardProuctRow({ productData }) {
+export function OrderCardProductRow({ order, productData }) {
+    if (!order || !productData) return null;
+    //console.log("Entire Props Box:", order, productData);
     const { product, estimatedDeliveryTimeMs, quantity } = productData;
 
     return (
@@ -33,8 +35,11 @@ export function OrderCardProuctRow({ productData }) {
                     </button>
                 </div>
 
+
+                {console.log(order.id)}
+                {console.log(product.id)}
                 <div className="product-actions">
-                    <Link to="/tracking">
+                    <Link to={`/tracking/${order.id}/${product.id}`}>
                         <button className="track-package-button button-secondary">
                             Track package
                         </button>

@@ -1,5 +1,6 @@
+import { Fragment } from 'react'
 import { OrderCardHeader } from './OrderCardHeader';
-import { OrderCardProuctRow } from './OrderCardProductRow';
+import { OrderCardProductRow } from './OrderCardProductRow';
 
 
 
@@ -10,20 +11,23 @@ export function OrdersGrid({ orders }) {
         <div className="orders-grid">
             {orders.length > 0 && orders.map((order) => {
 
-                return (<>
-                    <div key={order.id} className="order-container">
-                        <OrderCardHeader
-                            order={order}
-                        />
-                    </div>
+                return (
+                    <Fragment key={order.id}>
 
-                    {Object.keys(order.products).map((productId) => (
-                        <OrderCardProuctRow
-                            key={productId}
-                            productData={order.products[productId]}
-                        />
-                    ))}
-                </>
+                        <div className="order-container">
+                            <OrderCardHeader
+                                order={order}
+                            />
+                        </div>
+
+                        {Object.keys(order.products).map((productId) => (
+                            <OrderCardProductRow
+                                key={productId}
+                                productData={order.products[productId]}
+                                order={order}
+                            />
+                        ))}
+                    </Fragment>
                 );
 
             })}
