@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { CheckoutHeader } from './CheckoutHeader';
 import './CheckoutPage.css';
 import { OrderSummary } from './orderSummary/OrderSummary';
-import { PaymentSummary } from './SummaryPayment';
+import { PaymentSummary } from './PaymentSummary';
 
 
 
