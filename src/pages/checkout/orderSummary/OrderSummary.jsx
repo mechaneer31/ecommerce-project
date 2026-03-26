@@ -1,20 +1,21 @@
+import { Fragment } from 'react'
 import { DeliveryOptions } from './DeliveryOptions';
 import { CartItemDetails } from './CartItemDetails';
 import { DeliveryDate } from './DeliveryDate';
 
 
 
-export function OrderSummary({ cart, deliveryOptions }) {
+export function OrderSummary({ cart, deliveryOptions, loadCart }) {
     return (
         <div className="order-summary">
             {deliveryOptions.length > 0 && cart.map((cartItem) => {
 
                 return (
-                    <>
+                    <Fragment
+                        key={cartItem.productId}
+                    >
 
-
-
-                        <div key={cartItem.productID} className="cart-item-container">
+                        <div className="cart-item-container">
 
 
                             <DeliveryDate
@@ -32,12 +33,13 @@ export function OrderSummary({ cart, deliveryOptions }) {
                                 <DeliveryOptions
                                     cartItem={cartItem}
                                     deliveryOptions={deliveryOptions}
+                                    loadCart={loadCart}
                                 />
 
                             </div>
                         </div>
 
-                    </>
+                    </Fragment>
                 );
             })}
         </div>

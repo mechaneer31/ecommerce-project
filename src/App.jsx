@@ -38,6 +38,7 @@ function App() {
           path="checkout"
           element={<CheckoutPage
             cart={cart}
+            loadCart={loadCart}
           />}
         />
 
