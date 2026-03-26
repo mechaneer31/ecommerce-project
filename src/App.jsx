@@ -56,7 +56,9 @@ function App() {
 
         <Route
           path="*"
-          element={<NotFoundPage />}
+          element={<NotFoundPage
+            cart={cart}
+          />}
         />
 
       </Routes>

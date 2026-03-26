@@ -1,13 +1,15 @@
 import { Header } from '../components/Header';
 
-export function NotFoundPage() {
+export function NotFoundPage({ cart }) {
 
     return (
         <>
             <title>Page Not Found</title>
             <link rel="icon" type="image/svg+xml" href="notfound-favicon.png" />
 
-            <Header />
+            <Header
+                cart={cart}
+            />
 
 
 
