@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react'
 import { CheckoutHeader } from './CheckoutHeader';
 import './CheckoutPage.css';
-import { OrderSummary } from './orderSummary/OrderSummary';
+import { OrderSummary } from './orderSummary/OrderSummary'
 import { PaymentSummary } from './PaymentSummary';
 
 
@@ -46,6 +46,7 @@ export function CheckoutPage({ cart, loadCart }) {
 
                     <PaymentSummary
                         paymentSummary={paymentSummary}
+                        loadCart={loadCart}
                     />
                 </div>
             </div>
