@@ -35,9 +35,6 @@ export function OrderCardProductRow({ order, productData }) {
                     </button>
                 </div>
 
-
-                {console.log(order.id)}
-                {console.log(product.id)}
                 <div className="product-actions">
                     <Link to={`/tracking/${order.id}/${product.id}`}>
                         <button className="track-package-button button-secondary">
